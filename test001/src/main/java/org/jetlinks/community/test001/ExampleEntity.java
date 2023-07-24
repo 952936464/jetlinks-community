@@ -18,6 +18,7 @@ import javax.persistence.Column;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
 import java.sql.JDBCType;
+import java.util.Map;
 
 @Table(name = "example_crud")
 @Getter
@@ -70,10 +71,10 @@ public class ExampleEntity extends GenericEntity<String>
 //    @Schema(description = "多选")
 //    private ExampleEnum[] multiEnum;
 //
-//    @Column
-//    @JsonCodec
-//    //使用json字符串来存储map,因此数据库中使用LONGVARCHAR来存储
-//    @ColumnType(javaType = String.class, jdbcType = JDBCType.LONGVARCHAR)
-//    @Schema(description = "其他信息")
-//    private Map<String, Object> others;
+    @Column
+    @JsonCodec
+    //使用json字符串来存储map,因此数据库中使用LONGVARCHAR来存储
+    @ColumnType(javaType = String.class, jdbcType = JDBCType.LONGVARCHAR)
+    @Schema(description = "其他信息")
+    private Map<String, Object> others;
 }
