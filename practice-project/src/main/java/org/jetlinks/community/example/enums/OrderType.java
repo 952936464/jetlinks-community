@@ -15,6 +15,7 @@ import org.hswebframework.web.dict.I18nEnumDict;
 @Dict("order-type")
 @JsonDeserialize(contentUsing = EnumDict.EnumDictJSONDeserializer.class)
 public enum OrderType implements I18nEnumDict<String> {
+    //订单类型
     unpaid("未付款"),
     paid("付款成功"),
     successAccept("确认收货")
