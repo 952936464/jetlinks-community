@@ -13,7 +13,6 @@ import org.hswebframework.web.api.crud.entity.RecordModifierEntity;
 import org.hswebframework.web.crud.annotation.EnableEntityEvent;
 import org.hswebframework.web.crud.generator.Generators;
 import org.hswebframework.web.validator.CreateGroup;
-import org.jetlinks.community.example.enums.OrderType;
 import org.jetlinks.community.example.enums.ProductType;
 
 

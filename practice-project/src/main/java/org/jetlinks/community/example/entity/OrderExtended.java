@@ -9,7 +9,7 @@ import org.jetlinks.community.example.enums.ProductType;
 
 
 import javax.persistence.Column;
-import javax.persistence.Table;
+
 
 
 @Getter

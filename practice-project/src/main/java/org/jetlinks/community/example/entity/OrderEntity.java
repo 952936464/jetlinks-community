@@ -63,7 +63,6 @@ public class OrderEntity extends GenericEntity<String>
 
 
     @Column
-    //使用枚举掩码来存储多选值,因此数据库中用bigint来存储
     @EnumCodec
     @ColumnType(javaType = Long.class, jdbcType = JDBCType.BIGINT)
     @Schema(description = "订单类型")

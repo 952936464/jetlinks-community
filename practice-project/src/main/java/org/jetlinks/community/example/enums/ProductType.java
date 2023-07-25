@@ -13,9 +13,9 @@ import org.hswebframework.web.dict.I18nEnumDict;
 @Dict("product-type")
 @JsonDeserialize(contentUsing = EnumDict.EnumDictJSONDeserializer.class)
 public enum ProductType implements I18nEnumDict<String> {
-    product001("商品种类1"),
-    product002("商品种类2"),
-    product003("商品种类3")
+    product1("商品种类1"),
+    product2("商品种类2"),
+    product3("商品种类3")
     ;
 
     private final String text;
