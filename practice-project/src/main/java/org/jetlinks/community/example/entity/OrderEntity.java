@@ -55,13 +55,13 @@ public class OrderEntity extends GenericEntity<String>
 
     @Column
     @EnumCodec
-    @ColumnType(javaType = String.class, jdbcType = JDBCType.BIGINT)
+    @ColumnType(javaType = String.class)
     @Schema(description = "订单类型")
     private OrderType orderType;
 
     @Column
     @EnumCodec
-    @ColumnType(javaType = String.class, jdbcType = JDBCType.BIGINT)
+    @ColumnType(javaType = String.class)
     @Schema(description = "订单状态")
     private OrderStatus orderStatus;
 

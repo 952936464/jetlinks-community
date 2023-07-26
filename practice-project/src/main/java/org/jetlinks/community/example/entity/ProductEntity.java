@@ -42,14 +42,13 @@ public class ProductEntity extends GenericEntity<String>
     implements RecordCreationEntity, RecordModifierEntity {
 
     //平台ID长度统一64,商品id,不可修改
-    @Id
-    @Column(length = 64, nullable = false, updatable = false)
+
+
+
+
+    @Column(length = 64, nullable = false)
     @NotBlank(groups = CreateGroup.class)
-    @Schema(description = "商品ID", accessMode = Schema.AccessMode.READ_ONLY)
-
-
-
-    @NotBlank(groups = CreateGroup.class)
+    @Schema(description = "名称")
     private String name;
 
     @Column
@@ -61,7 +60,7 @@ public class ProductEntity extends GenericEntity<String>
 
     @Column
     @EnumCodec
-    @ColumnType(javaType = String.class, jdbcType = JDBCType.BIGINT)
+    @ColumnType(javaType = String.class)
     @Schema(description = "商品分类")
     private ProductType productType;
 
