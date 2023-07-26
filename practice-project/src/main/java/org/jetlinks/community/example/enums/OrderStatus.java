@@ -13,7 +13,6 @@ import java.*;
 @Getter
 @AllArgsConstructor
 @Dict("order-type")
-@JsonDeserialize(contentUsing = EnumDict.EnumDictJSONDeserializer.class)
 public enum OrderStatus implements I18nEnumDict<String> {
     //订单状态：包含3种
     unpaid("未付款"),
@@ -26,7 +25,5 @@ public enum OrderStatus implements I18nEnumDict<String> {
     public String getValue() {
         return name();
     }
-
-
 
 }

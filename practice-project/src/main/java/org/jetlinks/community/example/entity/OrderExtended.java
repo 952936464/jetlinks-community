@@ -16,12 +16,12 @@ import javax.persistence.Column;
 @Setter
 public class OrderExtended{
 
-    @Column(length = 64, nullable = false,updatable = false)
+
     private String id;
 
-    @Column
+
     private String name;
 
-    @Column
+
     private ProductType productType;
 }

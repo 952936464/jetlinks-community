@@ -55,13 +55,13 @@ public class OrderEntity extends GenericEntity<String>
 
     @Column
     @EnumCodec
-    @ColumnType(javaType = Long.class, jdbcType = JDBCType.BIGINT)
+    @ColumnType(javaType = String.class, jdbcType = JDBCType.BIGINT)
     @Schema(description = "订单类型")
     private OrderType orderType;
 
     @Column
     @EnumCodec
-    @ColumnType(javaType = Long.class, jdbcType = JDBCType.BIGINT)
+    @ColumnType(javaType = String.class, jdbcType = JDBCType.BIGINT)
     @Schema(description = "订单状态")
     private OrderStatus orderStatus;
 
@@ -74,7 +74,7 @@ public class OrderEntity extends GenericEntity<String>
     @Schema(description = "修改人ID", accessMode = Schema.AccessMode.READ_ONLY)
     private String modifierId;
 
-    @Column(nullable = false, updatable = false)
+    @Column(nullable = false)
     @DefaultValue(generator = Generators.CURRENT_TIME)
     @Schema(description = "修改时间", accessMode = Schema.AccessMode.READ_ONLY)
     private Long modifyTime;

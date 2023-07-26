@@ -46,13 +46,10 @@ public class ProductEntity extends GenericEntity<String>
     @Column(length = 64, nullable = false, updatable = false)
     @NotBlank(groups = CreateGroup.class)
     @Schema(description = "商品ID", accessMode = Schema.AccessMode.READ_ONLY)
-    public String getId() {
-        return super.getId();
-    }
 
-    @Column(length = 64, nullable = false)
+
+
     @NotBlank(groups = CreateGroup.class)
-    @Schema(description = "商品名称")
     private String name;
 
     @Column
@@ -63,14 +60,13 @@ public class ProductEntity extends GenericEntity<String>
 
 
     @Column
-    //使用枚举掩码来存储多选值,因此数据库中用bigint来存储
     @EnumCodec
-    @ColumnType(javaType = Long.class, jdbcType = JDBCType.BIGINT)
+    @ColumnType(javaType = String.class, jdbcType = JDBCType.BIGINT)
     @Schema(description = "商品分类")
     private ProductType productType;
 
 
-    @GeneratedValue
+    @GeneratedValue(generator = Generators.CURRENT_TIME)
     @Column
     @Schema(description = "上架日期", accessMode = Schema.AccessMode.READ_ONLY)
     private Long upTime;

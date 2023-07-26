@@ -13,7 +13,6 @@ import org.hswebframework.web.dict.I18nEnumDict;
 @Getter
 @AllArgsConstructor
 @Dict("order-type")
-@JsonDeserialize(contentUsing = EnumDict.EnumDictJSONDeserializer.class)
 public enum OrderType implements I18nEnumDict<String> {
     //订单类型包含3种
     normOrder("标准采购订单"),
