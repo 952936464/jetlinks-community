@@ -12,7 +12,7 @@ import java.util.Objects;
 
 @Service
 public class OrderService extends GenericReactiveCrudService<OrderEntity,String> {
-
+    //暂时还没用到
     public Mono<Integer> updateStatus(String id, OrderType status) {
         return createUpdate()
             .set(OrderEntity::getOrderType, status)

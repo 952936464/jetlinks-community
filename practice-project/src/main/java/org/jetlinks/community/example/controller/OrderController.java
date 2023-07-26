@@ -38,7 +38,7 @@ public class OrderController implements ReactiveServiceCrudController<OrderEntit
 
     private final QueryHelper queryHelper;
 
-    //增 todo
+    //增：有bug没写 todo
 
     //删
     @DeleteMapping("/_practice/{id}")
@@ -66,11 +66,5 @@ public class OrderController implements ReactiveServiceCrudController<OrderEntit
         return orderService;
     }
 
-    @Getter
-    @Setter
-    public static class OrderInfo {
-        private OrderEntity order;
-        private OrderExtended ext;
-    }
 
 }
